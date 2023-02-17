@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+.container {
+  width: 100%;
+  max-width: 40rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.container header {
+  background-color: #e1e1e1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container header h2 {
+  font-size: 3.2rem;
+}
+
+form {
+  padding: 2rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control input {
+  font-size: 1.4rem;
+  display: block;
+  border: 1px solid var(--light-color1);
+  border-radius: 1rem;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+.form-control input:focus-visible {
+  outline: 1px solid var(--dark-color1);
+  border: none;
+}
+
+.form-control i {
+  position: absolute;
+  top: 3.6rem;
+  right: 1rem;
+  visibility: hidden;
+}
+
+.form-control small {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+form button {
+  padding: 1.6rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--dark-color2);
+  color: var(--light-color2);
+  font-size: 1.6rem;
+}
+
+form button:hover {
+  filter: brightness(0.7);
+  transition: 0.5s;
+}
+
+.form-control.success input {
+  border-color: var(--color-success);
+}
+
+.form-control.error input {
+  border-color: var(--color-error);
+}
+
+.form-control.success i.icon-success {
+  color: var(--color-success);
+  visibility: visible;
+}
+
+.form-control.error i.icon-error {
+  color: var(--color-error);
+  visibility: visible;
+}
