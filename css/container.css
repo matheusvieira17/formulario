@@ -8,7 +8,7 @@
 }
 
 .container header {
-  background-color: #e1e1e1;
+  background-color: var(--light-color1);
   padding: 2rem;
   text-align: center;
 }
@@ -93,4 +93,9 @@ form button:hover {
 .form-control.error i.icon-error {
   color: var(--color-error);
   visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: var(--color-error);
 }
