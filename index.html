@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/container.css" />
+    <link rel="stylesheet" href="css/modal.css" />
   </head>
   <body>
     <main class="container">
@@ -44,26 +45,49 @@
         <div class="form-control">
           <label for="password">Senha</label>
           <input
-            type="text"
+            type="password"
             name="password"
             id="password"
             placeholder="Digite sua senha"
           />
+          <i class="bi bi-exclamation-circle icon-error"></i>
+          <i class="bi bi-check-circle icon-success"></i>
           <small>Mensagem de erro</small>
         </div>
 
         <div class="form-control">
           <label for="confirmPassword">Confirmar senha</label>
           <input
-            type="text"
+            type="password"
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Confirme sua senha"
           />
+          <i class="bi bi-exclamation-circle icon-error"></i>
+          <i class="bi bi-check-circle icon-success"></i>
           <small>Mensagem de erro</small>
         </div>
         <button type="submit">Enviar</button>
       </form>
     </main>
+
+    <article id="overlay">
+      <section id="modal">
+        <header class="modal-header">
+          <h2>Cadastro feito com sucesso</h2>
+          <button>
+            <i class="bi bi-x" id="icon-close-modal"></i>
+          </button>
+        </header>
+      </section>
+      <section class="modal-body">
+        <p>
+          O formulário foi preenchido corretamente e o usuário foi cadastrado no
+          sistema
+        </p>
+      </section>
+    </article>
   </body>
+  <script src="verify-form.js"></script>
+  <script src="modal.js"></script>
 </html>
