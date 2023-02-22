@@ -38,13 +38,21 @@ function checkInputs() {
     setSuccessFor(password);
   }
 
-
   if (confirmPasswordValue === empty) {
     setErrorFor(confirmPassword, "A confirmação de senha é obrigatória");
   } else if (confirmPasswordValue !== passwordValue) {
     setErrorFor(confirmPassword, "As senhas não conferem");
   } else {
     setSuccessFor(confirmPassword);
+  }
+
+  const formControl = form.querySelectorAll(".form-control")
+  const isFormValid = [...formControl].every((formControl => {
+    return formControl.classList.contains("success")
+  }))
+
+  if (isFormValid) {
+    toggleModal()
   }
 }
 
